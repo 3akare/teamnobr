@@ -1,55 +1,31 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
-import "@leenguyen/react-flip-clock-countdown/dist/index.css";
+//Components
+import NavBar from "./components/NavBar";
+import Main from "./components/Main";
 
-class Example extends Component {
-  render() {
-    return (
-      <FlipClockCountdown
-        to={new Date().getTime() + 24 * 3600 * 1000 + 5000}
-        labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
-        labelStyle={{
-          fontSize: 10,
-          fontWeight: 500,
-          textTransform: "uppercase",
-          color: "black",
-        }}
-        digitBlockStyle={{ width: 32, height: 50, fontSize: 30 }}
-        dividerStyle={{ color: "white", height: 1 }}
-        separatorStyle={{ color: "#F5841B", size: "6px" }}
-        duration={0.5}
-      >
-        Finished
-      </FlipClockCountdown>
-    );
-  }
-}
+//styles
+import style from "./style.module.css";
 
 function App() {
+  const [dark, setDark] = useState(true);
+
+  function handleClick() {
+    setDark((state) => !state);
+  }
   return (
-    <>
-    <nav>
-      <div>
-        <div></div>
-      </div>
-    </nav>
-    <main className="main">
-      <h1 className="body--text">
-        Countdown to the <span style={{ color: "#f5841b" }}>nobr</span> team
-        website
-      </h1>
-      <div>
-        <Example />
-      </div>
-      <img
-        src="/launch.svg"
-        alt=""
-        aria-disabled
-        className="body--image"
-      />
-    </main>
-    </>
+    <div
+      className={style.main}
+      style={{
+        color: dark ? "" : "white",
+        backgroundColor: dark ? "" : "#121212",
+        transition:
+          "background-color ease-in-out 0.25s, color ease-in-out 0.25s",
+      }}
+    >
+      <NavBar handleClick={handleClick} dark={dark} />
+      <Main />
+    </div>
   );
 }
 
