@@ -10,7 +10,7 @@ class CountDown extends Component {
     return (
       <div className={style.counterdownContainer}>
         <FlipClockCountdown
-          to="2023-10-21T14:27:32.635Z"
+          to="2023-10-23T23:59:59.635Z"
           showLabels={true}
           labels={["Days", "Hours", "Minutes", "Seconds"]}
           labelStyle={{ color: dark ? "#121212" : "white" }}
