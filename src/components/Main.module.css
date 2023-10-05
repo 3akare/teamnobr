@@ -12,7 +12,7 @@
   text-align: center;
   font-weight: 400;
   font-size: 1.75rem;
-  padding: 1.75rem;
+  padding: 1rem;
 }
 
 .navigation > ul {
@@ -21,4 +21,30 @@
   display: flex;
   align-self: center;
   justify-content: space-around;
+}
+
+.hello {
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-digit-block-width: 4rem !important; /* width of digit card */
+  --fcc-digit-block-height: 6rem !important; /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: 4rem !important; /* font size of digit */
+  --fcc-digit-color: white !important; /* color of digit */
+  --fcc-label-font-size: 1rem !important; /* font size of label */
+  --fcc-label-color: black !important; /* color of label */
+  --fcc-background: black !important; /* background of digit card */
+  --fcc-divider-color: white !important; /* color of divider */
+  --fcc-divider-height: 0.1rem !important; /* height of divider */
+  --fcc-separator-size: 0.7rem !important; /* size of colon */
+  --fcc-separator-color: #f5841b !important; /* color of colon */
+  transition: all ease-in-out 0.25s !important;
+}
+
+@media screen and (max-width: 450px) {
+  .hello {
+    --fcc-digit-block-width: 2.125rem !important; /* width of digit card */
+    --fcc-digit-block-height: 3.75rem !important; /* height of digit card, highly recommend in even number */
+    --fcc-digit-font-size: 2.125rem !important; /* font size of digit */
+    --fcc-separator-size: 0.4rem !important; /* size of colon */
+    --fcc-label-font-size: 0.65rem !important; /* font size of label */
+  }
 }

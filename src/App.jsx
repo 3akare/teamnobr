@@ -24,7 +24,7 @@ function App() {
       }}
     >
       <NavBar handleClick={handleClick} dark={dark} />
-      <Main />
+      <Main dark={dark} />
     </div>
   );
 }

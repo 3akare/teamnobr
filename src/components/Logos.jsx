@@ -2,9 +2,10 @@ export function LogosTwitter(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="2.35rem"
+      width="2.125rem"
       height="2rem"
       viewBox="0 0 256 209"
+      style={{ cursor: "pointer" }}
       {...props}
     >
       <path
@@ -19,9 +20,10 @@ export function LogosLinkedinIcon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="2.35rem"
+      width="2.125rem"
       height="2rem"
       viewBox="0 0 256 256"
+      style={{ cursor: "pointer" }}
       {...props}
     >
       <path
@@ -35,7 +37,7 @@ export function LogosLinkedinIcon(props) {
 export function NobrLogo({ dark }) {
   return (
     <svg
-      width="2.35rem"
+      width="2.125rem"
       height="2rem"
       viewBox="0 0 32 41"
       fill="none"
