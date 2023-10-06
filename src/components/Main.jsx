@@ -6,11 +6,6 @@ import CountDown from "./CountDown";
 export default function Main({ dark }) {
   return (
     <main className={style.main}>
-      <h1>
-        Countdown to
-        <span style={{ color: "#F5841B" }}> nobr </span>
-        team website
-      </h1>
       <CountDown dark={dark} />
       <footer className={style.navigation}>
         <ul>
